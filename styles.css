@@ -1,9 +1,16 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #2f2f2f;
+
 }
-.main {
+html {
+  background: url(bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/*.main {
   height: 100vh;
   width: 100vw;
   position: relative;
@@ -58,21 +65,21 @@ body {
     background-position: Calc(-35vw - 40px) 50%;
   }
 }
-
+*/
 .typewriter h1 {
   color: #fff;
-  text-align: justify;
+  text-align: center;
   transform:translateY(500%) translateX(0%);
-
+font-size: 50px;
   font-family: monospace;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .3em solid orange; /* The typwriter cursor */
+  border-right: .1em solid blue; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
 
   animation:
-    typing 3.5s steps(30, end),
+    typing 5s steps(30, end),
     blink-caret .5s step-end infinite;
 
 }
@@ -86,24 +93,25 @@ body {
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  10% { border-color: orange }
+  10% { border-color: blue }
 }
 .typewriter1 {
 
 }
 .typewriter1 h1 {
   color: #fff;
-
-  transform:translateY(1800%) translateX(0%);
+text-align: center;
+  transform:translateY(500%) translateX(0%);
   font-family: monospace;
+  font-size: 50px;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid red; /* The typwriter cursor */
+  border-right: .1em solid cyan; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
 
   animation:
-    typing1 3.5s steps(30, end),
+    typing1 7s steps(30, end),
     blink-caret1 .5s step-end infinite;
 
     animation-delay: 0.5s;
@@ -119,10 +127,6 @@ body {
 
 /* The typewriter cursor effect */
 @keyframes blink-caret1 {
-  from, to { border-color: red
-  text-align: center;
+  from, to { border-color: transparent }
+  10% { border-color: cyan }
    }
-  100% { border-color: orange
-    text-align: justify;
-   }
-}

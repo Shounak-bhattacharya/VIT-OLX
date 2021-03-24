@@ -55,7 +55,7 @@
       background-color: red;
     }
 
-    .dropdown-content {
+    .dropdown-content-for-values {
       display: none;
       position: absolute;
       background-color: #f9f9f9;
@@ -64,7 +64,7 @@
       z-index: 1;
     }
 
-    .dropdown-content a {
+    .dropdown-content-for-values a {
       float: none;
       color: black;
       padding: 12px 16px;
@@ -72,8 +72,21 @@
       display: block;
       text-align: left;
     }
+    body {
+           animation: fadeInAnimation ease 5s;
+           animation-iteration-count: 1;
+           animation-fill-mode: forwards;
+       }
+       @keyframes fadeInAnimation {
+           0% {
+               opacity: 0;
+           }
+           100% {
+               opacity: 1;
+           }
+       }
 
-    .dropdown-content a:hover {
+    .dropdown-content-for-values a:hover {
       background-color: #ddd;
     }
 
@@ -124,17 +137,18 @@
 
     <a href="upload.html">Upload to sell</a>
     <a href="partners.html">View our partners</a>
-    <div class="dropdown">
+    <a href="us.html">About Us</a>
+  <!--  <div class="dropdown">
       <button class="dropbtn">What-else?
         <i class="fa fa-caret-down"></i>
       </button>
-      <div class="dropdown-content">
+      <div class="dropdown-content-for-values">
         <a href="us.html">About us</a>
         <a href="#">Collaborations</a>
         <a href="#">Link 3</a>
       </div>
     </div>
-
+-->
   </span>
 <br>
 <br>
