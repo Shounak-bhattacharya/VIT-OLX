@@ -9,10 +9,17 @@
 
   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
 
@@ -22,16 +29,34 @@
     }
 
     .navbar {
+      display: flex;
       overflow: hidden;
-      background-color: #333;
-      float: right;
+      background: #6C63FF;
+      /* width: 100%; */
+      justify-content: space-evenly;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 15;
+    }
+
+    .home {
+      margin-top: 60px;
+    }
+
+    .logo {
+      flex: 2;
+    }
+
+    .nav-links {
+      flex: 3;
     }
 
     .navbar a {
-      float: right;
-      font-size: 20px;
-      color: cyan;
-      text-align: center;
+      /* float: right; */
+      font-size: 24px;
+      color: white;
+      /* text-align: center; */
       padding: 14px 16px 15px 14px;
       text-decoration: none;
     }
@@ -54,7 +79,8 @@
 
     .navbar a:hover,
     .dropdown:hover .dropbtn {
-      background-color: red;
+      background: #534AE8;
+      transition: all 0.25s ease-in ;
     }
 
     .dropdown-content-for-values {
@@ -74,19 +100,22 @@
       display: block;
       text-align: left;
     }
+
     body {
-           animation: fadeInAnimation ease 5s;
-           animation-iteration-count: 1;
-           animation-fill-mode: forwards;
-       }
-       @keyframes fadeInAnimation {
-           0% {
-               opacity: 0;
-           }
-           100% {
-               opacity: 1;
-           }
-       }
+      animation: fadeInAnimation ease 5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeInAnimation {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
 
     .dropdown-content-for-values a:hover {
       background-color: #ddd;
@@ -96,7 +125,7 @@
       display: block;
     }
 
-html {
+    html {
       scroll-behavior: smooth;
     }
 
@@ -124,39 +153,64 @@ html {
       margin-bottom: 30%;
       text-decoration: none;
     }
+
+  .home {
+    display: flex;
+  }
+
+  .home > div {
+    flex: 1;
+  }
+
+  .main-text {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .main-text span:nth-child(1) {
+    font-size: 64px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+  }
+
+  .sub-text {
+    font-size: 32px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .what-we-do__cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .lead {
+    text-align: center;
+  }
   </style>
 </head>
 
 <body>
-  <span class="navbar">
-
-    <a href="home.html">Home</a>
-    <a href="partner.html">Our partners</a>
-
-    <a href="foreword.html">Foreword</a>
-    <a href="options.html">Search for options</a>
-
-    <a href="upload.html">Upload to sell</a>
-    <a href="#about">What we do?</a>
-    <a href="us.html">About Us</a>
-  <!--  <div class="dropdown">
-      <button class="dropbtn">What-else?
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content-for-values">
-        <a href="us.html">About us</a>
-        <a href="#">Collaborations</a>
-        <a href="#">Link 3</a>
-      </div>
+  <div class="navbar">
+    <div class="logo">
+      VITOLX
     </div>
--->
-  </span>
-<br>
-<br>
-<br>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="partner.html">Our partners</a>
 
+      <a href="foreword.html">Foreword</a>
+      <a href="options.html">Search for options</a>
 
-  <div class="carousel slide" data-ride="carousel" id="slide">
+      <a href="upload.html">Upload to sell</a>
+      <a href="#about">What we do?</a>
+      <a href="us.html">About Us</a>
+    </div>
+  </div>
+
+  <!-- <div class="carousel slide" data-ride="carousel" id="slide">
     <ul class="carousel-indicators">
       <li data-target="#slide" data-slide-to="0" classs="active"></li>
       <li data-target="#slide" data-slide-to="1"></li>
@@ -198,61 +252,99 @@ html {
     <a class="carousel-control-next" href="#slide" role="button" data-slide="next">
       <div class="carousel-control-next-icon" aria-hidden="true"></div>
       <div class="sr-only">Next</div>
-</a>
-    </div>
+    </a>
+  </div> -->
+<div class="home">
+  <div class="main-text">
+    <span>VIT - OLX</span>
+    <br>
+    <span class="sub-text">
+      One stop solution to all your needs.
+    </span>
+  </div>
+  <div class="illustraion">
+    <img src="./undraw_business_deal_cpi9.svg" alt="">
+  </div>
 </div>
-
-<div class="jumbotron" id="about">
-        <div class="container-fluid padding">
-            <div class="row welcome text-center">
-                <div class="col-12">
-                    <h2 class="display-4">What we do</h2><br>
-										<h5 class="jumbotron">Presenting our formula:- Take a picture + Upload + Post = trust !</h5>
-
-
+  <div class="jumbotron" id="about">
+    <div class="container-fluid padding">
+      <div class="row welcome text-center">
+        <div class="col-12">
+          <h2 class="display-4">What we do</h2><br>
+          <div class="what-we-do__cards row">
+            <div class="col-xs-12">
+              <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
-                <hr>
+              </div>
             </div>
+            <div class="col-xs-12">
+              <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12">
+              <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+        <hr>
+      </div>
+    </div>
+<br>
 
-		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10">
-
-			<p class="lead">
-								We recognize the trust you place in us when you keep your item
-            </p>
-		</div>
+      <p class="lead">
+        We recognize the trust you place in us when you keep your item
+      </p>
   </div>
 
 
-      <div class="container-fluid padding">
-              <div class="row text-center">
-              <div class="col-md-4">
-                      <a class="navbar-brand" href="#"></a>
-                      <hr class="light">
-                      <p>999-999-9999</p>
-                      <p>email@gmail.com</p>
-                      <p>Dtreet name</p>
-                      <p>City, State, 00000</p>
-                  </div>
-                  <div class="col-md-4">
-                      <hr class="light">
-                      <h5>Our hours</h5>
-                      <hr class="light">
-                      <p>Monday: 9am to 5pm</p>
-                      <p>Saturday: 10am to 6pm</p>
-                      <p>Sunday closed</p>
-                  </div>
-                  <div class="col-md-4">
-                      <hr class="light">
-                      <h5>Service Area</h5>
-                      <hr class="light">
-                      <p>City, State, 00000</p>
-                      <p>City, State, 00000</p>
-                      <p>City, State, 00000</p>
-                      <p>City, State, 00000</p>
-                  </div>
-              </div>
-          </div>
+  <div class="container-fluid padding">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <a class="navbar-brand" href="#"></a>
+        <hr class="light">
+        <p>999-999-9999</p>
+        <p>email@gmail.com</p>
+        <p>Dtreet name</p>
+        <p>City, State, 00000</p>
+      </div>
+      <div class="col-md-4">
+        <hr class="light">
+        <h5>Our hours</h5>
+        <hr class="light">
+        <p>Monday: 9am to 5pm</p>
+        <p>Saturday: 10am to 6pm</p>
+        <p>Sunday closed</p>
+      </div>
+      <div class="col-md-4">
+        <hr class="light">
+        <h5>Service Area</h5>
+        <hr class="light">
+        <p>City, State, 00000</p>
+        <p>City, State, 00000</p>
+        <p>City, State, 00000</p>
+        <p>City, State, 00000</p>
+      </div>
+    </div>
+  </div>
 
 
 </body>
