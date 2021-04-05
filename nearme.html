@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+  * {
+  box-sizing: border-box;
+}
+.navbar {
+  display: flex;
+  overflow: hidden;
+  background: #6C63FF;
+  width: 100%;
+  justify-content: space-evenly;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 15;
+}
+
+.home {
+  margin-top: 60px;
+}
+
+.logo {
+  flex: 2;
+}
+
+.nav-links {
+  flex: 3;
+}
+
+.navbar a {
+  /* float: right; */
+  font-size: 24px;
+  color: white;
+  /* text-align: center; */
+  padding: 14px 16px 15px 14px;
+  text-decoration: none;
+}
+.navbar a {
+  /* float: right; */
+  font-size: 24px;
+  color: white;
+  /* text-align: center; */
+  padding: 14px 16px 15px 14px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: cyan;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background: #534AE8;
+  transition: all 0.25s ease-in ;
+}
+
+.dropdown-content-for-values {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content-for-values a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+
+body {
+
+    background: url("undraw_web_shopping_dd4l.svg") no-repeat center center fixed;
+
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.searchform {
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  width: 30%;
+  z-index: 15;
+
+}
+label, input {
+  vertical-align: baseline;
+  color: white;
+}
+label {
+  margin: 0.125em 0.125em 0 0;
+  float: right;
+
+}
+input[type="search"] {
+  border: 2px solid #737373;
+  border-width: 0 0 3px;
+  background-color: transparent;
+  font: 22px "Open Sans", sans-serif;
+  padding: 0.125em 0.225em;
+  width: 75%;
+  float: left;
+
+}
+input[type="search"]:focus {
+  color: #737373;
+  border-color: #737373;
+  outline: none;
+}
+</style>
+</head>
+<body>
+  <span class="navbar">
+    <form class="searchform group">
+      <label for="search-box">
+        <span class="fa fa-2x fa-search" aria-hidden="true"></span>
+      </label>
+
+      <input type="search" id="search-box" placeholder="Search">
+    </form>
+
+    <a href="home.html">Home</a>
+    <a href="partner.html">Our partners</a>
+
+    <a href="foreword.html">Foreword</a>
+    <a href="options.html">Search for options</a>
+
+    <a href="praccc.html">Upload to sell</a>
+    <a href="#about">What we do?</a>
+    <a href="us.html">About Us</a>
+  <!--  <div class="dropdown">
+      <button class="dropbtn">What-else?
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content-for-values">
+        <a href="us.html">About us</a>
+        <a href="#">Collaborations</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div>
+  -->
+  </span>
+
+
+</body>
+</html>
