@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+
+  <title>p2p Chat</title>
+  <meta name="description" content="Tuts+ Chat Application" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</head>
+<style media="screen">
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    margin: 20px auto;
+    font-family: "Lato";
+    font-weight: 300;
+  }
+
+  form {
+    padding: 15px 25px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  form label {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  input {
+    font-family: "Lato";
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .navbar {
+    display: flex;
+    overflow: hidden;
+    background: #6C63FF;
+    /* width: 100%; */
+    justify-content: space-evenly;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 15;
+  }
+
+  .home {
+    margin-top: 60px;
+  }
+
+  .logo {
+    flex: 0.3;
+  }
+
+  .nav-links {
+    flex: 3;
+  }
+
+  .navbar a {
+    /* float: right; */
+    font-size: 24px;
+    color: white;
+    /* text-align: center; */
+    padding: 14px 16px 15px 14px;
+    text-decoration: none;
+  }
+
+  .dropdown {
+    float: right;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: cyan;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .navbar a:hover,
+  .dropdown:hover .dropbtn {
+    background: #534AE8;
+    transition: all 0.25s ease-in;
+  }
+
+
+  a {
+    color: #0000ff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  #wrapper,
+  #loginform {
+    margin: 0 auto;
+    padding-bottom: 25px;
+    background: #6C63FF;
+    width: 600px;
+    max-width: 100%;
+    border: 2px solid #212121;
+    border-radius: 4px;
+  }
+
+  #loginform {
+    padding-top: 18px;
+    text-align: center;
+  }
+
+  #loginform p {
+    padding: 15px 25px;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+
+  #chatbox {
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 10px;
+    background: #fff;
+    height: 300px;
+    width: 530px;
+    border: 1px solid #a7a7a7;
+    overflow: auto;
+    border-radius: 4px;
+    border-bottom: 4px solid #a7a7a7;
+  }
+
+  #usermsg {
+    flex: 1;
+    border-radius: 4px;
+    border: 1px solid #ff9800;
+  }
+
+  #name {
+    border-radius: 4px;
+    border: 1px solid #ff9800;
+    padding: 2px 8px;
+  }
+
+  #submitmsg,
+  #enter {
+    background: #ff9800;
+    border: 2px solid #e65100;
+    color: white;
+    padding: 4px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+
+  .error {
+    color: #ff0000;
+  }
+
+  #menu {
+    padding: 15px 25px;
+    display: flex;
+  }
+
+  #menu p.welcome {
+    flex: 1;
+  }
+
+  a#exit {
+    color: white;
+    background: #0000e6;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+
+  .msgln {
+    margin: 0 0 5px 0;
+  }
+
+  .msgln span.left-info {
+    color: orangered;
+  }
+
+  .msgln span.chat-time {
+    color: #666;
+    font-size: 60%;
+    vertical-align: super;
+  }
+
+  .msgln b.user-name,
+  .msgln b.user-name-left {
+    font-weight: bold;
+    background: #546e7a;
+    color: white;
+    padding: 2px 4px;
+    font-size: 90%;
+    border-radius: 4px;
+    margin: 0 5px 0 0;
+  }
+
+  .msgln b.user-name-left {
+    background: orangered;
+  }
+</style>
+
+<body>
+  <div class="navbar">
+    <div class="logo">
+      VIT-OLX
+    </div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="partner.html">Our partners</a>
+
+      <a href="foreword.html">Foreword</a>
+      <a href="options.html">Search for options</a>
+
+      <a href="praccc.html">Upload to sell</a>
+      <a href="#about">What we do?</a>
+      <a href="us.html">About Us</a>
+
+    </div>
+  </div>
+<br><br><br><br><br><br>
+
+  <div id="wrapper">
+    <div id="menu">
+      <p class="welcome">Welcome, <b></b></p>
+      <p class="logout"><a id="exit" href="home.html">Exit Chat</a></p>
+    </div>
+
+    <div id="chatbox"></div>
+
+    <form name="message" action="">
+      <input navame="usermsg" type="text" id="usermsg" />
+      <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
+    </form>
+  </div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // jQuery Document
+    $(document).ready(function() {});
+  </script>
+
+    <div class="container-fluid padding">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <a class="navbar-brand" href="#" alt="shounak_abhishek_logo">LOGO</a>
+          <hr class="light">
+          <p>999-999-9999</p>
+          <p>email@gmail.com</p>
+          <p>Dtreet name</p>
+          <p>City, State, 00000</p>
+        </div>
+        <div class="col-md-4">
+          <hr class="light">
+          <h5>Our hours</h5>
+          <hr class="light">
+          <p>Monday: 9am to 5pm</p>
+          <p>Saturday: 10am to 6pm</p>
+          <p>Sunday closed</p>
+        </div>
+        <div class="col-md-4">
+          <hr class="light">
+          <h5>Service Area</h5>
+          <hr class="light">
+          <p>City, State, 00000</p>
+          <p>City, State, 00000</p>
+          <p>City, State, 00000</p>
+          <p>City, State, 00000</p>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+
+</html>
+
+</body>
+
+</html>

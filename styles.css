@@ -4,7 +4,7 @@ body {
 
 }
 html {
-  background: url(bg.jpg) no-repeat center center fixed;
+  background: url("https://wallpaperaccess.com/full/1924554.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -67,7 +67,7 @@ html {
 }
 */
 .typewriter h1 {
-  color: #fff;
+  color: #6C63FF;
   text-align: center;
   transform:translateY(500%) translateX(0%);
 font-size: 50px;
@@ -99,7 +99,7 @@ font-size: 50px;
 
 }
 .typewriter1 h1 {
-  color: #fff;
+  color: #6C63FF;
 text-align: center;
   transform:translateY(500%) translateX(0%);
   font-family: monospace;
