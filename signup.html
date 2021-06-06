@@ -208,7 +208,7 @@
   width: 100vw;
   height: 120vh;
     background: white;
-    padding: 10px 10px;
+    padding: 10px 5px;
     border-top: 10px solid  #2e2eb8;
     border-bottom: 10px solid  #2e2eb8;
     border-left: 10px solid  #2e2eb8;
@@ -368,33 +368,42 @@
       <div class="sr-only">Next</div>
     </a>
   </div> -->
-<div class="form-final" >
+<div class="form-final">
 
-<div style="width:30vw; float:left; transform: translateY(0%);">
+<div style="width:30vw; float:left; transform: translateY(10%);">
+  <br>  <br>  <br>  <br>  <br>  <br>  <br>
   <img src="undraw_Login_re_4vu2.svg">
 </div>
-  <div class="contact-us" style="width:35%;  float: right; height:75vh;  padding-top: 100px;">
-        <h1 style="text-align:center; color: #6C63FF;">LOGIN FORM</h1>
+  <div class="contact-us" style="width:35%;  float: right; height:100vh;  padding-top: 20px; padding-bottom: 10px">
+        <h1 style="text-align:center; color: #6C63FF;">SIGN IN</h1>
         <form action="#">
+          <label for="customerName">NAME <em>&#x2a;</em></label>
+          <input id="customerName" name="customerName" required="" type="text" />
           <label for="customerName">EMAIL <em>&#x2a;</em></label>
           <input id="customerEmail" name="customerEmail" required="" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
-          <label for="pwd">Password:</label>
+
+            <label for="customerPhone">PHONE</label>
+          <input id="customerPhone" name="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" />
+
+  <label for="pwd">Password:</label>
    <input type="password" id="pwd" name="pwd"
    pattern=".{8,}" title="Eight or more characters">
-   <!-- <label>Remember me</label> -->
+   <label>Remember me <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px; transform: translate(-20%,-150%);">    </label>
 
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
-
-     <a href="signup.html">Sign up here</a>
-
-      <button type="submit" class="signupbtn">Sign In</button>
-
+    <div class="clearfix">
+      <button type="submit" class="signupbtn">Register</button>
         </form>
+      </div>
 </div>
 </div>
+<script type="text/javascript">
 
+  window.localStorage.setItem(key, value);
+</script>
 </body>
-  <div class="container-fluid padding" style="position:sticky; margin-top: 570px;">
+  <div class="container-fluid padding" style="position:sticky; margin-top: 100vh;">
     <div class="row text-center">
       <div class="col-md-4">
         <a class="navbar-brand" href="#"></a>
