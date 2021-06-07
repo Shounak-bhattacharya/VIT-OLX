@@ -3,7 +3,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta charset="utf-8"/>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -27,19 +27,6 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
     }
-    form-final {
-  background: url("fp.jpg") center center no-repeat;
-  background-size: cover;
-  transform: translateY(200px);
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  font-size: 12pt;
-  font-family: "Bookman";
-  color: #ff0055;
-}
 
     .navbar {
       display: flex;
@@ -48,10 +35,10 @@
       /* width: 100%; */
       justify-content: space-evenly;
       padding: 20px;
-      align-self: flex-end;
       position: sticky;
       top: 0;
       z-index: 15;
+      height: 76px;
     }
 
     .home {
@@ -59,7 +46,7 @@
     }
 
     .logo {
-      flex: 0.9;
+      flex: 2;
     }
 
     .nav-links {
@@ -68,7 +55,7 @@
 
     .navbar a {
       /* float: right; */
-      font-size: 24px;
+      font-size: 20px;
       color: white;
       /* text-align: center; */
       padding: 14px 16px 15px 14px;
@@ -203,103 +190,59 @@
   .lead {
     text-align: center;
   }
-  .contact-us
-  {
-  width: 100vw;
-  height: 120vh;
-    background: white;
-    padding: 10px 10px;
-    border-top: 10px solid  #2e2eb8;
-    border-bottom: 10px solid  #2e2eb8;
-    border-left: 10px solid  #2e2eb8;
-    border-right: 10px solid  #2e2eb8;
-
-    padding-right:5%;
-    padding-left:5%;
-
-  }
-
-  label, input, textarea {
-    display: block;
-    color: #6C63FF;
-    width: 100%;
-    font-size: 12pt;
-    line-height: 24pt;
-    font-family: "Spartan";
-  }
-
-  input {
-    margin-bottom: 24pt;
-  }
-
-  h3 {
-    font-weight: normal;
-    font-size: 10pt;
-    line-height: 24pt;
-    font-style: italic;
-    margin: 0 0 0.5em 0;
-  }
-
-  span {
-    font-size: 8pt;
-  }
-
-  em {
-    color: #e6e6ff;
-    font-weight: bold;
-  }
-
-  input, textarea {
-    border: none;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
-    background: #e6e6ff;
-    padding-left: 5px;
-    outline: none;
-  }
-
-  input:focus, textarea:focus {
-    border: 1px solid #e6e6ff;
-  }
-
-  textarea {
-    resize: none;
-  }
-
-  button {
-    display: block;
-    float: right;
-    line-height: 24pt;
-    padding: 0 20px;
-    border: none;
-    background: #6C63FF;;
+  .contact-form{
+    background: #fff;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+.contact-form form{
+    padding: 14%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-bottom: 8%;
+    margin-top: -10%;
+    text-align: center;
     color: white;
-    letter-spacing: 2px;
-    transition: 0.2s all ease-in-out;
-    border-bottom: 2px solid transparent;
-    outline: none;
-  }
-  button:hover {
-    background: inherit;
-    color: #f45702;
-    border-bottom: 2px solid #f45702;
-  }
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
 
-  ::selection {
-    background: #ffc7b8;
-  }
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
 
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  textarea:-webkit-autofill,
-  textarea:-webkit-autofill:hover,
-  textarea:-webkit-autofill:focus {
-    border: 1px solid #6bd4b1;
-    -webkit-text-fill-color: #2A293E;
-    -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
-    transition: background-color 5000s ease-in-out 0s;
-  }
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+
+}
 
   </style>
 </head>
@@ -311,13 +254,16 @@
     </div>
     <div class="nav-links">
       <a href="home.html">Home</a>
-      <a href="partner.html">Our partners</a>
+      <a href="home.html">Our partners</a>
 
       <a href="foreword.html">Foreword</a>
       <a href="options.html">Search for options</a>
 
       <a href="praccc.html">Upload to sell</a>
+      <a href="#about">What we do?</a>
       <a href="us.html">About Us</a>
+      <a href="#contact-us">Contact Us</a>
+      <a href="login.html">Sign in</a>
     </div>
   </div>
 
@@ -368,37 +314,26 @@
       <div class="sr-only">Next</div>
     </a>
   </div> -->
-<div class="form-final" >
-
-<div style="width:30vw; float:left; transform: translateY(0%);">
-  <img src="undraw_Login_re_4vu2.svg">
+<div class="home">
+  <div class="main-text">
+    <span>VIT - OLX</span>
+    <br>
+    <span class="sub-text">
+      One stop solution to all your needs.
+    </span>
+  </div>
+  <div class="illustraion">
+    <img src="./undraw_detailed_analysis_xn7y.svg" alt="">
+  </div>
 </div>
-  <div class="contact-us" style="width:35%;  float: right; height:75vh;  padding-top: 100px;">
-        <h1 style="text-align:center; color: #6C63FF;">LOGIN FORM</h1>
-        <form>
-          <label for="customerName">EMAIL <em>&#x2a;</em></label>
-          <input id="customerEmail" name="customerEmail" required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
-          <label for="pwd">Password:</label>
-   <input type="password" id="pwd" name="pwd" pattern=".{8,}" title="Eight or more characters" required/>
-   <!-- <label>Remember me</label> -->
-
-
-
-     <a href="signup.html">Sign up here</a>
-
-      <button type="submit" class="signupbtn" value="Sign In" id="sign-in">Sign In</button>
-
-        </form>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-
-</div>
-</div>
-
-
-  <div class="container-fluid padding" style="position:sticky; margin-top: 570px;">
+ <div class="jumbotron" id="about" style="background: #b3b3ff;">
+    
+    </div>
+    <script src="./scripts/products.js"></script>
+  <div class="container-fluid padding">
     <div class="row text-center">
       <div class="col-md-4">
-        <a class="navbar-brand" href="#"></a>
+        <a class="navbar-brand" href="#" alt="shounak_abhishek_logo">LOGO</a>
         <hr class="light">
         <p>999-999-9999</p>
         <p>email@gmail.com</p>
@@ -424,8 +359,8 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="./scripts/loginpart.js"></script>
-</body>
 
+
+</body>
 
 </html>

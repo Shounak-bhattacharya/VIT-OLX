@@ -377,19 +377,16 @@
         <form action="#">
           <label for="customerName">NAME <em>&#x2a;</em></label>
           <input id="customerName" name="customerName" required="" type="text" />
-          <label for="customerEmail">EMAIL <em>&#x2a;</em></label>
-          <input id="customerEmail" name="customerEmail" required="" type="email" />
-          <label for="customerPhone">PHONE</label>
-          <input id="customerPhone" name="customerPhone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel" />
-          <label for="customerPhone">FILE UPLOAD</label>
-
-   <input type="file" id="myFile" name="filename">
-          <label for="orderNumber">Description</label>
-          <input id="orderNumber" name="orderNumber" type="text" />
+          <label for="description">description <em>&#x2a;</em></label>
+          <input id="description" name="customerEmail" required type="text" />
+          <label for="tags">TAGS</label>
+          <input id="tags" name="TAGS" required type="tags" />
+          <label for="desc">long Description</label>
+          <input id="desc" name="desc" required type="text" />
           <h3>
             Please make sure the document consists an image of the item you want to sell
           </h3>
-          <button id="customerOrder">SUBMIT</button>
+           <button type="submit" class="signupbtn" value="Sign In" id="add-in">Sign In</button>
         </form>
       </div>
 </div>
@@ -425,6 +422,6 @@
     </div>
   </div>
 
-
+ <script type="text/javascript" src="./scripts/addItem.js"></script>
 
 </html>
