@@ -3,7 +3,7 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<meta charset="utf-8"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
@@ -375,25 +375,26 @@
 </div>
   <div class="contact-us" style="width:35%;  float: right; height:75vh;  padding-top: 100px;">
         <h1 style="text-align:center; color: #6C63FF;">LOGIN FORM</h1>
-        <form action="#">
+        <form>
           <label for="customerName">EMAIL <em>&#x2a;</em></label>
-          <input id="customerEmail" name="customerEmail" required="" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
+          <input id="customerEmail" name="customerEmail" required type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"/>
           <label for="pwd">Password:</label>
-   <input type="password" id="pwd" name="pwd"
-   pattern=".{8,}" title="Eight or more characters">
+   <input type="password" id="pwd" name="pwd" pattern=".{8,}" title="Eight or more characters" required/>
    <!-- <label>Remember me</label> -->
 
-
+<!-- kahin pr kuch comment ka error hai -->
 
      <a href="signup.html">Sign up here</a>
 
-      <button type="submit" class="signupbtn">Sign In</button>
+      <button type="submit" class="signupbtn" value="Sign In" id="sign-in">Sign In</button>
 
         </form>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
 </div>
 </div>
 
-</body>
+
   <div class="container-fluid padding" style="position:sticky; margin-top: 570px;">
     <div class="row text-center">
       <div class="col-md-4">
@@ -423,7 +424,8 @@
       </div>
     </div>
   </div>
-
+  <script type="text/javascript" src="./scripts/loginpart.js"></script>
+</body>
 
 
 </html>
