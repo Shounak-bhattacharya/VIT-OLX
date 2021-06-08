@@ -243,11 +243,33 @@
     cursor: pointer;
 
 }
+#about {
+  display: flex;
+}
+
+#about div {
+ min-height: 240px;
+ min-width: 180px;
+ background: white;
+ border-radius: 8px; 
+ position: relative;
+ padding: 8px;
+ align-items: center;
+ justify-content: flex-start;
+ margin-left: 10px;
+ flex: 0.2;
+ flex-wrap: wrap;
+}
+
+#about div img {
+  width: 100%;
+  height: auto;
+}
 
   </style>
 </head>
 
-<body>
+<body onload="loadItems()">
   <div class="navbar">
     <div class="logo">
       VITOLX
@@ -257,7 +279,7 @@
       <a href="home.html">Our partners</a>
 
       <a href="foreword.html">Foreword</a>
-      <a href="options.html">Search for options</a>
+      <a href="product.html">Product options</a>
 
       <a href="praccc.html">Upload to sell</a>
       <a href="#about">What we do?</a>
@@ -329,7 +351,6 @@
  <div class="jumbotron" id="about" style="background: #b3b3ff;">
     
     </div>
-    <script src="./scripts/products.js"></script>
   <div class="container-fluid padding">
     <div class="row text-center">
       <div class="col-md-4">
@@ -360,7 +381,7 @@
     </div>
   </div>
 
-
+<script src='./scripts/products.js'></script>
 </body>
 
 </html>

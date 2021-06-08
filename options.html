@@ -98,7 +98,7 @@
 
 body {
 
-    background: url("undraw_web_shopping_dd4l.svg") no-repeat center center fixed;
+    
 
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
@@ -145,13 +145,34 @@ body {
   font-size: 12pt;
   font-family: "Spartan";
   color: #2A293E;*/
-    background: url("undraw_web_shopping_dd4l.svg") no-repeat center center fixed;
+    
 
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+#about {
+  display: flex;
+}
 
+#about div {
+ min-height: 240px;
+ min-width: 180px;
+ background: white;
+ border-radius: 8px; 
+ position: relative;
+ padding: 8px;
+ align-items: center;
+ justify-content: flex-start;
+ margin-left: 10px;
+ flex: 0.2;
+ flex-wrap: wrap;
+}
+
+#about div img {
+  width: 100%;
+  height: auto;
+}
 </style>
 </head>
 <body>
@@ -162,8 +183,9 @@ body {
       </label>
 
       <input type="search" id="search-box" placeholder="Search">
-    </form>
+      <button type="submit" id="submit">Search</button>
 
+    </form>
     <a href="home.html">Home</a>
     <a href="partner.html">Our partners</a>
 
@@ -186,6 +208,39 @@ body {
   -->
   </span>
 
-<a href="chatboardp2p.html">Chat board, talk to your customer demo link</a>
+
+<div class="jumbotron" id="about" style="background: #b3b3ff;">
+    
+    </div>
+     <div class="container-fluid padding" style=" position:fixed; bottom:0;">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <a class="navbar-brand" href="#" alt="shounak_abhishek_logo">LOGO</a>
+        <hr class="light">
+        <p>999-999-9999</p>
+        <p>email@gmail.com</p>
+        <p>Dtreet name</p>
+        <p>City, State, 00000</p>
+      </div>
+      <div class="col-md-4">
+        <hr class="light">
+        <h5>Our hours</h5>
+        <hr class="light">
+        <p>Monday: 9am to 5pm</p>
+        <p>Saturday: 10am to 6pm</p>
+        <p>Sunday closed</p>
+      </div>
+      <div class="col-md-4">
+        <hr class="light">
+        <h5>Service Area</h5>
+        <hr class="light">
+        <p>City, State, 00000</p>
+        <p>City, State, 00000</p>
+        <p>City, State, 00000</p>
+        <p>City, State, 00000</p>
+      </div>
+    </div>
+  </div>
+    <script type="text/javascript" src="./scripts/searchTags.js"/>
 </body>
 </html>
