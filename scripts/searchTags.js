@@ -57,6 +57,10 @@
                 let productImg = document.createElement('img');
                 productImg.setAttribute('src',(product.images[0]?"http://127.0.0.1:8000"+product.images[0].image:"https://www.arraymedical.com/wp-content/uploads/2018/12/product-image-placeholder.jpg"));
                 cardDiv.appendChild(productImg);
+                let name = document.createElement('h5');
+                productname = document.createTextNode(product.name);
+                name.appendChild(productname);
+                cardDiv.appendChild(name);
                 let productDesc = document.createElement('p');
                 productDescText = document.createTextNode(product.description);
                 productDesc.appendChild(productDescText);
@@ -65,6 +69,14 @@
                 tagsText = document.createTextNode(product.tags);
                 tags.appendChild(tagsText);
                 cardDiv.appendChild(tags);
+                // let id = document.createElement('p');
+                // idText = document.createTextNode(product.id);
+                // id.appendChild(idText);
+                // cardDiv.appendChild(id);
+                let button = document.createElement('button');
+                bt = document.createTextNode("Tap to Contact");
+                button.appendChild(bt);
+                cardDiv.appendChild(button);
                 productCards.appendChild(cardDiv);
                 console.log(cardDiv);
                
