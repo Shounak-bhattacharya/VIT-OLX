@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 
 
 <style>
@@ -168,11 +180,36 @@ body {
  flex: 0.2;
  flex-wrap: wrap;
 }
+.home {
+    display: flex;
+  }
+.home > div {
+    flex: 1;
+  }
+
+  .main-text {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .main-text span:nth-child(1) {
+    font-size: 64px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bolder;
+  }
+
+  .sub-text {
+    font-size: 32px;
+    font-family: "Montserrat", sans-serif;
+  }
 
 #about div img {
   width: 100%;
   height: auto;
 }
+
 </style>
 </head>
 <body>
@@ -209,9 +246,21 @@ body {
   -->
   </span>
 
+<div class="home">
+  <div class="main-text">
+    <span>VIT - OLX</span>
+    <br>
+    <span class="sub-text">
+      One stop solution to all your needs.
+    </span>
+  </div>
+  <div class="illustraion">
+    <img src="./undraw_detailed_analysis_xn7y.svg" alt="">
+  </div>
+</div>
 
-<div class="jumbotron" id="about" style="background: #b3b3ff;">
-    
+ <div class="jumbotron" id="about" style="background: #b3b3ff;">
+       
     </div>
      <div class="container-fluid padding">
     <div class="row text-center">
