@@ -16,7 +16,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q=vellore&appid=73d5aef80
 
   main.innerHTML = nameValue;
   desc.innerHTML = "Desc - "+descValue;
-  temp.innerHTML = "Temp - "+tempValue+" degree celsius";
+  temp.innerHTML = "Temp - "+Math.round(tempValue)+"°C";
   input.value ="";
 
 })

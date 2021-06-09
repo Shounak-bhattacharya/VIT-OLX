@@ -14,6 +14,7 @@ console.log(document.getElementById("sign-in"));
     if(this.status === 200) {
       const obj = JSON.parse(request.response);
     window.localStorage.setItem('Id-token',obj.access);
+    window.location="http://127.0.0.1:5500/VIT-OLX/product.html"
     
     }
 else {
